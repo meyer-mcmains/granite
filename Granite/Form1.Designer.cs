@@ -1,6 +1,6 @@
 ﻿namespace Granite
 {
-    partial class Form1
+    partial class Granite
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.pswdLabel.TabIndex = 4;
             this.pswdLabel.Text = "Password";
             // 
-            // Form1
+            // Granite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +80,7 @@
             this.Controls.Add(this.usrlabel);
             this.Controls.Add(this.pswd);
             this.Controls.Add(this.username);
-            this.Name = "Form1";
+            this.Name = "Granite";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);

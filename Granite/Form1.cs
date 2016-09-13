@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Granite
 {
-    public partial class Form1 : Form
+    public partial class Granite : Form
     {
-        public Form1()
+        public Granite()
         {
             InitializeComponent();
         }
