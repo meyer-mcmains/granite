@@ -17,6 +17,7 @@ namespace Granite
             InitializeComponent();
         }
 
+        //center login labels and txtboxes on load
         private void Form1_Load(object sender, EventArgs e)
         {
             usrlabel.Left = (this.ClientSize.Width - username.Width) / 2;
@@ -29,6 +30,7 @@ namespace Granite
             pswd.Top = (this.pswdLabel.Top + pswd.Height);
         }
 
+        //recenter login labels and txtboxes if window is resized
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             usrlabel.Left = (this.ClientSize.Width - username.Width) / 2;
@@ -40,6 +42,7 @@ namespace Granite
             pswd.Left = this.usrlabel.Left;
             pswd.Top = (this.pswdLabel.Top + pswd.Height);
         }
+
 
         private void pswd_TextChanged(object sender, EventArgs e)
         {
