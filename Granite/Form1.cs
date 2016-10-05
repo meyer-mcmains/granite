@@ -116,6 +116,9 @@ namespace Granite
                         pswdLabel.Hide();
                         usrlabel.Hide();
                         loginButton.Hide();
+                        MainWindow mw = new MainWindow();
+                        mw.Show();
+                        this.Hide();
                     }
                     else
                     {
