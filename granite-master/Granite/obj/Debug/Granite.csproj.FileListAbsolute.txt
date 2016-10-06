@@ -1,0 +1,13 @@
+E:\granite-master\Granite\bin\Debug\Granite.exe.config
+E:\granite-master\Granite\bin\Debug\Granite.exe
+E:\granite-master\Granite\bin\Debug\Granite.pdb
+E:\granite-master\Granite\bin\Debug\MySql.Data.dll
+E:\granite-master\Granite\obj\Debug\Granite.csprojResolveAssemblyReference.cache
+E:\granite-master\Granite\obj\Debug\Granite.Form1.resources
+E:\granite-master\Granite\obj\Debug\Granite.MainWindow.resources
+E:\granite-master\Granite\obj\Debug\Granite.Properties.Resources.resources
+E:\granite-master\Granite\obj\Debug\WindowsFormsApplication1.splashscreen.resources
+E:\granite-master\Granite\obj\Debug\Granite.csproj.GenerateResource.Cache
+E:\granite-master\Granite\obj\Debug\Granite.exe
+E:\granite-master\Granite\obj\Debug\Granite.pdb
+E:\granite-master\Granite\obj\Debug\Granite.Home.resources
