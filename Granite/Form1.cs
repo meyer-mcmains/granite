@@ -116,8 +116,8 @@ namespace Granite
                         pswdLabel.Hide();
                         usrlabel.Hide();
                         loginButton.Hide();
-                        MainWindow mw = new MainWindow();
-                        mw.Show();
+                        Home hw = new Home();
+                        hw.Show();
                         this.Hide();
                     }
                     else
@@ -135,6 +135,11 @@ namespace Granite
                 indicator.ForeColor = Color.Red;
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
