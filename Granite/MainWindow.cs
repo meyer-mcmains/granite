@@ -16,5 +16,12 @@ namespace Granite
         {
             InitializeComponent();
         }
+
+        private void doStuffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home m = new Home();
+            m.Show();
+            Close();
+        }
     }
 }

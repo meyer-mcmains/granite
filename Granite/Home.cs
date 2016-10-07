@@ -17,11 +17,25 @@ namespace Granite
             InitializeComponent();
         }
 
+        
+
         private void giveTest_Click(object sender, EventArgs e)
         {
             MainWindow mw = new MainWindow();
             mw.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            makeTest mt = new makeTest();
+            mt.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
