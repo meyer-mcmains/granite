@@ -13,6 +13,7 @@ namespace Granite
 {
     public partial class Form1 : Form
     {
+        private Connection c;
         public Form1()
         {
             InitializeComponent();
@@ -52,15 +53,11 @@ namespace Granite
         //establish a connection to the database
         private void ConnectDatabase()
         {
-            MySql.Data.MySqlClient.MySqlConnection conn;
-            string myConnectionString;
-            myConnectionString = "server=einstein.etsu.edu;uid=bentleyp;pwd=12345;database=bentleyp";
+             
 
             try
             {
-                conn = new MySql.Data.MySqlClient.MySqlConnection();
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
+                c = new Connection();
                 indicator.ForeColor = Color.Green;
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -72,22 +69,17 @@ namespace Granite
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            MySql.Data.MySqlClient.MySqlConnection conn;
-            string myConnectionString;
-            myConnectionString = "server=einstein.etsu.edu;uid=bentleyp;pwd=12345;database=bentleyp";
+            Connection c = new Connection();
             string usrName = null;
             string password = null;
             try
-            {
-                conn = new MySql.Data.MySqlClient.MySqlConnection();
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
+            {               
                 indicator.ForeColor = Color.Green;
 
                 MySqlDataReader reader = null;
                 string selectUser = "SELECT username FROM user";
 
-                MySqlCommand getUsername = new MySqlCommand(selectUser, conn);
+                MySqlCommand getUsername = new MySqlCommand(selectUser, c.getConn());
                 reader = getUsername.ExecuteReader();
 
                 while (reader.Read())
@@ -98,7 +90,7 @@ namespace Granite
 
                 string selectPassword = "SELECT password FROM user";
 
-                MySqlCommand getPassword = new MySqlCommand(selectPassword, conn);
+                MySqlCommand getPassword = new MySqlCommand(selectPassword, c.getConn());
                 reader = getPassword.ExecuteReader();
 
                 while (reader.Read())
@@ -111,11 +103,7 @@ namespace Granite
                 {
                     if (pswd.Text == password)
                     {
-                        username.Hide();
-                        pswd.Hide();
-                        pswdLabel.Hide();
-                        usrlabel.Hide();
-                        loginButton.Hide();
+                        c.Close();
                         Home hw = new Home();
                         hw.Show();
                         this.Hide();
@@ -139,6 +127,7 @@ namespace Granite
 
         private void exit_Click(object sender, EventArgs e)
         {
+            c.Close();
             Application.Exit();
         }
     }
