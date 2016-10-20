@@ -1,0 +1,15 @@
+Z:\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\bin\Debug\Granite.exe.config
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\bin\Debug\Granite.exe.config
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\bin\Debug\Granite.exe
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\bin\Debug\Granite.pdb
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\bin\Debug\MySql.Data.dll
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.csprojResolveAssemblyReference.cache
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.Home.resources
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.makeTest.resources
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.Properties.Resources.resources
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\WindowsFormsApplication1.splashscreen.resources
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.csproj.GenerateResource.Cache
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.exe
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.pdb
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.logIn.resources
+\\etsulab1\users\HUSKINST\My Documents\TeamSlaughterRule\granite-master\granite-master\Granite\obj\Debug\Granite.TestWindow.resources
