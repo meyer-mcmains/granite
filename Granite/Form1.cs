@@ -53,8 +53,6 @@ namespace Granite
         //establish a connection to the database
         private void ConnectDatabase()
         {
-             
-
             try
             {
                 c = new Connection();

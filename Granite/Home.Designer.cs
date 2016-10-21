@@ -31,6 +31,7 @@
             this.giveTest = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.EditUsr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // giveTest
@@ -63,11 +64,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // EditUsr
+            // 
+            this.EditUsr.Location = new System.Drawing.Point(345, 202);
+            this.EditUsr.Name = "EditUsr";
+            this.EditUsr.Size = new System.Drawing.Size(92, 23);
+            this.EditUsr.TabIndex = 3;
+            this.EditUsr.Text = "Edit User";
+            this.EditUsr.UseVisualStyleBackColor = true;
+            this.EditUsr.Click += new System.EventHandler(this.EditUsr_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 357);
+            this.Controls.Add(this.EditUsr);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.giveTest);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button giveTest;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EditUsr;
     }
 }
