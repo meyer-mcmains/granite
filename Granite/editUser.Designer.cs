@@ -61,6 +61,7 @@
             this.usernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTxt.Location = new System.Drawing.Point(133, 6);
             this.usernameTxt.Name = "usernameTxt";
+            this.usernameTxt.ReadOnly = true;
             this.usernameTxt.Size = new System.Drawing.Size(220, 26);
             this.usernameTxt.TabIndex = 0;
             this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);

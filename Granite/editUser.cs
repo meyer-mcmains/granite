@@ -20,24 +20,26 @@ namespace Granite
         private int emailChanged = 0;
         private int firstChanged = 0;
         private int lastChanged = 0;
+        private string userName = Granite.Form1.userName;
 
         public EditUser()
         {
             InitializeComponent();
             conn = new Connection();
             GetUserInfo();
+            conn.Close();
         }
 
         public void GetUserInfo()
         {
             u = new User();
             MySqlDataReader reader = null;
-            string selectUserName = "SELECT username FROM user";
-            string selectPassword = "SELECT password FROM user";
-            string selectEmail = "SELECT email FROM user";
-            string selectFirstName = "SELECT firstname FROM user";
-            string selectLastName = "SELECT lastname FROM user";
-            string selectLevel = "SELECT level FROM user";
+            string selectUserName = "SELECT username FROM user WHERE username = '" + userName + "'";
+            string selectPassword = "SELECT password FROM user WHERE username = '" + userName + "'";
+            string selectEmail = "SELECT email FROM user WHERE username = '" + userName + "'";
+            string selectFirstName = "SELECT firstname FROM user WHERE username = '" + userName + "'";
+            string selectLastName = "SELECT lastname FROM user WHERE username = '" + userName + "'";
+            string selectLevel = "SELECT level FROM user WHERE username = '" + userName + "'";
 
             MySqlCommand getUsername = new MySqlCommand(selectUserName, conn.getConn());
             reader = getUsername.ExecuteReader();
