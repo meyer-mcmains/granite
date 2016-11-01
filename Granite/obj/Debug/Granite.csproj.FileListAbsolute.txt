@@ -1,1 +1,28 @@
-C:\Users\Tyler\Documents\granite\granite\Granite\bin\Debug\Granite.exe.config
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\bin\Debug\Granite.exe.config
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\bin\Debug\Granite.exe
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\bin\Debug\Granite.pdb
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\bin\Debug\MySql.Data.dll
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.csprojResolveAssemblyReference.cache
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.Form1.resources
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.Home.resources
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.MainWindow.resources
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.makeTest.resources
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.Properties.Resources.resources
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\WindowsFormsApplication1.splashscreen.resources
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.csproj.GenerateResource.Cache
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.exe
+Z:\College Courses\SE1\sprint 2\granite-master\Granite\obj\Debug\Granite.pdb
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\bin\Debug\Granite.exe.config
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.exe
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.pdb
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.Form1.resources
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.Home.resources
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.MainWindow.resources
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.makeTest.resources
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.Properties.Resources.resources
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\WindowsFormsApplication1.splashscreen.resources
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\obj\Debug\Granite.csproj.GenerateResource.Cache
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\bin\Debug\Granite.exe
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\bin\Debug\Granite.pdb
+C:\Users\Tyler\Desktop\granite-createandgivetest-humann\granite-createandgivetest-humann\createandgivetest\Granite\bin\Debug\MySql.Data.dll
