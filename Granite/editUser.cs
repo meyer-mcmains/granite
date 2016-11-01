@@ -16,7 +16,6 @@ namespace Granite
         private Connection conn;
         private User u;
         private int passwordChanged = 0;
-        private int userNameChanged = 0;
         private int emailChanged = 0;
         private int firstChanged = 0;
         private int lastChanged = 0;
