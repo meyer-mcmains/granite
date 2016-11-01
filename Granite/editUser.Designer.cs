@@ -64,7 +64,6 @@
             this.usernameTxt.ReadOnly = true;
             this.usernameTxt.Size = new System.Drawing.Size(220, 26);
             this.usernameTxt.TabIndex = 0;
-            this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
             // 
             // passwordLbl
             // 
@@ -236,6 +235,7 @@
             this.Controls.Add(this.usrName);
             this.Name = "EditUser";
             this.Text = "editUser";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditUser_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -27,7 +27,6 @@ namespace Granite
             InitializeComponent();
             conn = new Connection();
             GetUserInfo();
-            conn.Close();
         }
 
         public void GetUserInfo()
@@ -116,16 +115,6 @@ namespace Granite
             enterPassword.Visible = true;
         }
 
-        private void usernameTxt_TextChanged(object sender, EventArgs e)
-        {
-            if (usernameTxt.Text != u.username)
-            {
-                userNameChanged = 1;
-                submit.Visible = true;
-                enterPassword.Visible = true;
-            }
-        }
-
         private void emailTxt_TextChanged(object sender, EventArgs e)
         {
             if (emailTxt.Text != u.email)
@@ -158,11 +147,7 @@ namespace Granite
 
         private void submit_Click(object sender, EventArgs e)
         {
-            if (userNameChanged == 1)
-            {
-                UpdateUserName();
-            }
-            else if (passwordChanged == 1)
+            if (passwordChanged == 1)
             {
                 UpdatePassword();
             }
@@ -218,39 +203,37 @@ namespace Granite
             }
         }
 
-        private void UpdateUserName()
-        {
-            string query = "UPDATE user SET username = '" + usernameTxt.Text + "'";
-            MySqlCommand updateUserName = new MySqlCommand(query, conn.getConn());
-            updateUserName.ExecuteNonQuery();
-        }
-
         private void UpdatePassword()
         {
-            string query = "UPDATE user SET password = '" + passwordTxt.Text + "'";
+            string query = "UPDATE user SET password = '" + passwordTxt.Text + "' WHERE username= '" + userName + "'";
             MySqlCommand updatePassword = new MySqlCommand(query, conn.getConn());
             updatePassword.ExecuteNonQuery();
         }
 
         private void UpdateEmail()
         {
-            string query = "UPDATE user SET email = '" + emailTxt.Text + "'";
+            string query = "UPDATE user SET email = '" + emailTxt.Text + "' WHERE username= '" + userName + "'";
             MySqlCommand updateEmail = new MySqlCommand(query, conn.getConn());
             updateEmail.ExecuteNonQuery();
         }
 
         private void UpdateFirst()
         {
-            string query = "UPDATE user SET firstname = '" + firstTxt.Text + "'";
+            string query = "UPDATE user SET firstname = '" + firstTxt.Text + "' WHERE username= '" + userName + "'";
             MySqlCommand updateFirst = new MySqlCommand(query, conn.getConn());
             updateFirst.ExecuteNonQuery();
         }
 
         private void UpdateLast()
         {
-            string query = "UPDATE user SET lastname = '" + lastTxt.Text + "'";
+            string query = "UPDATE user SET lastname = '" + lastTxt.Text + "' WHERE username= '" + userName + "'";
             MySqlCommand updateLast = new MySqlCommand(query, conn.getConn());
             updateLast.ExecuteNonQuery();
+        }
+
+        private void EditUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            conn.Close();
         }
     }
 }
