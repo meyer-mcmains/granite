@@ -13,7 +13,7 @@ namespace Granite
 {
     public partial class makeTest : Form
     {
-        private MySql.Data.MySqlClient.MySqlConnection conn;
+        private Connection conn;
         public makeTest()
         {
             InitializeComponent();
@@ -23,14 +23,9 @@ namespace Granite
 
         public void ConnectDatabase()
         {
-            string myConnectionString;
-            myConnectionString = "server=einstein.etsu.edu;uid=bentleyp;pwd=12345;database=bentleyp";
-
             try
             {
-                conn = new MySql.Data.MySqlClient.MySqlConnection();
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
+                conn = new Connection();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -45,7 +40,25 @@ namespace Granite
 
         private void saveQuestion_Click(object sender, EventArgs e)
         {
+            MySqlDataReader rdr = null;
+            try
+            {
+                string strCourse = comboBox2.SelectedItem.ToString();
+                string strAdmin = "admin";
+                strCourse = strCourse.Substring(0, 4);
+                //richTextBox1.Text = strCourse;
+                string strQuery = "INSERT INTO question(questiontext, answertext, creator, course) VALUES('"+richTextBox1.Text+"','" + richTextBox2.Text+"','"+strAdmin+"',"+ strCourse+")";
+                MySqlCommand addQuestion = new MySqlCommand(strQuery, conn.getConn());
+                rdr = addQuestion.ExecuteReader();
+                rdr.Close();
+                richTextBox1.Text = "";
+                richTextBox2.Text = "";
+            }
+            catch(Exception ex)
+            {
 
+            }
+            
         }
 
         private void finishCreating_Click(object sender, EventArgs e)
@@ -63,18 +76,20 @@ namespace Granite
             MySqlDataReader reader = null;
             string selectCourse = "SELECT * FROM course";
 
-            MySqlCommand getCourse = new MySqlCommand(selectCourse, conn);
+            MySqlCommand getCourse = new MySqlCommand(selectCourse, conn.getConn());
             reader = getCourse.ExecuteReader();
             
             while (reader.Read())
             {
                 //String test = (string)reader["name"];
                 //label3.Text = (string)reader["name"];
+
                 this.comboBox2.Items.Add(reader["courseID"].ToString() + " " + (string)reader["name"]);
                 if (!reader.HasRows)
-                    return;
+                    break;
             }
             reader.Close();
+            return;
         }
     }
 }
