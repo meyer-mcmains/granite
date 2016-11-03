@@ -19,7 +19,7 @@ namespace Granite
         private int emailChanged = 0;
         private int firstChanged = 0;
         private int lastChanged = 0;
-        private string userName = Granite.Form1.userName;
+        
 
         public EditUser()
         {
@@ -31,13 +31,14 @@ namespace Granite
         public void GetUserInfo()
         {
             u = new User();
+            u.username = Form1.userName;
             MySqlDataReader reader = null;
-            string selectUserName = "SELECT username FROM user WHERE username = '" + userName + "'";
-            string selectPassword = "SELECT password FROM user WHERE username = '" + userName + "'";
-            string selectEmail = "SELECT email FROM user WHERE username = '" + userName + "'";
-            string selectFirstName = "SELECT firstname FROM user WHERE username = '" + userName + "'";
-            string selectLastName = "SELECT lastname FROM user WHERE username = '" + userName + "'";
-            string selectLevel = "SELECT level FROM user WHERE username = '" + userName + "'";
+            string selectUserName = "SELECT username FROM user WHERE username = '" + u.username + "'";
+            string selectPassword = "SELECT password FROM user WHERE username = '" + u.username + "'";
+            string selectEmail = "SELECT email FROM user WHERE username = '" + u.username + "'";
+            string selectFirstName = "SELECT firstname FROM user WHERE username = '" + u.username + "'";
+            string selectLastName = "SELECT lastname FROM user WHERE username = '" + u.username + "'";
+            string selectLevel = "SELECT level FROM user WHERE username = '" + u.username + "'";
 
             MySqlCommand getUsername = new MySqlCommand(selectUserName, conn.getConn());
             reader = getUsername.ExecuteReader();
@@ -204,28 +205,28 @@ namespace Granite
 
         private void UpdatePassword()
         {
-            string query = "UPDATE user SET password = '" + passwordTxt.Text + "' WHERE username= '" + userName + "'";
+            string query = "UPDATE user SET password = '" + passwordTxt.Text + "' WHERE username= '" + u.username + "'";
             MySqlCommand updatePassword = new MySqlCommand(query, conn.getConn());
             updatePassword.ExecuteNonQuery();
         }
 
         private void UpdateEmail()
         {
-            string query = "UPDATE user SET email = '" + emailTxt.Text + "' WHERE username= '" + userName + "'";
+            string query = "UPDATE user SET email = '" + emailTxt.Text + "' WHERE username= '" + u.username + "'";
             MySqlCommand updateEmail = new MySqlCommand(query, conn.getConn());
             updateEmail.ExecuteNonQuery();
         }
 
         private void UpdateFirst()
         {
-            string query = "UPDATE user SET firstname = '" + firstTxt.Text + "' WHERE username= '" + userName + "'";
+            string query = "UPDATE user SET firstname = '" + firstTxt.Text + "' WHERE username= '" + u.username + "'";
             MySqlCommand updateFirst = new MySqlCommand(query, conn.getConn());
             updateFirst.ExecuteNonQuery();
         }
 
         private void UpdateLast()
         {
-            string query = "UPDATE user SET lastname = '" + lastTxt.Text + "' WHERE username= '" + userName + "'";
+            string query = "UPDATE user SET lastname = '" + lastTxt.Text + "' WHERE username= '" + u.username + "'";
             MySqlCommand updateLast = new MySqlCommand(query, conn.getConn());
             updateLast.ExecuteNonQuery();
         }

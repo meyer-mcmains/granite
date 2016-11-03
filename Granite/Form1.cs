@@ -14,6 +14,7 @@ namespace Granite
     public partial class Form1 : Form
     {
         private Connection c;
+        public static string userName;
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +49,38 @@ namespace Granite
             pswd.Top = (this.pswdLabel.Top + pswd.Height);
         }
 
+        //establish a connection to the database
+        private void ConnectDatabase()
+        {
+
+
+            try
+            {
+                c = new Connection();
+                indicator.ForeColor = Color.Green;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                indicator.ForeColor = Color.Red;
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            Connection c = new Connection();
+            string usrName = null;
+            string password = null;
+            try
+            {
+                indicator.ForeColor = Color.Green;
+
+                MySqlDataReader reader = null;
+                string selectUser = "SELECT username FROM user";
+
+                MySqlCommand getUsername = new MySqlCommand(selectUser, c.getConn());
+                reader = getUsername.ExecuteReader();
+
                 while (reader.Read())
                 {
                     usrName = (string) reader["username"];
@@ -69,7 +102,8 @@ namespace Granite
                 {
                     if (pswd.Text == password)
                     {
-                        userName = usrName;
+                        User u = new User(username.Text);
+                        userName = username.Text;
                         c.Close();
                         Home hw = new Home();
                         hw.Show();
