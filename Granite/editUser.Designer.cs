@@ -234,8 +234,9 @@
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.usrName);
             this.Name = "EditUser";
-            this.Text = "editUser";
+            this.Text = "Create User";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditUser_FormClosed);
+            this.Load += new System.EventHandler(this.EditUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

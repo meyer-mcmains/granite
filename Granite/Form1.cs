@@ -14,7 +14,7 @@ namespace Granite
     public partial class Form1 : Form
     {
         private Connection c;
-        public static string userName; //public static because this must be used for SQL WHERE
+        public static string userName;
         public Form1()
         {
             InitializeComponent();
@@ -47,13 +47,13 @@ namespace Granite
             pswdLabel.Top = (this.username.Top + username.Height);
             pswd.Left = this.usrlabel.Left;
             pswd.Top = (this.pswdLabel.Top + pswd.Height);
-            loginButton.Left = this.usrlabel.Left;
-            loginButton.Top = (this.pswd.Top + pswd.Height);
         }
 
         //establish a connection to the database
         private void ConnectDatabase()
         {
+
+
             try
             {
                 c = new Connection();
@@ -72,11 +72,11 @@ namespace Granite
             string usrName = null;
             string password = null;
             try
-            {               
+            {
                 indicator.ForeColor = Color.Green;
 
                 MySqlDataReader reader = null;
-                string selectUser = "SELECT username FROM user WHERE username='" + username.Text + "'";
+                string selectUser = "SELECT username FROM user";
 
                 MySqlCommand getUsername = new MySqlCommand(selectUser, c.getConn());
                 reader = getUsername.ExecuteReader();
@@ -102,7 +102,8 @@ namespace Granite
                 {
                     if (pswd.Text == password)
                     {
-                        userName = usrName;
+                        User u = new User(username.Text);
+                        userName = username.Text;
                         c.Close();
                         Home hw = new Home();
                         hw.Show();

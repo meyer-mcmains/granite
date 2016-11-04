@@ -1,0 +1,32 @@
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\bin\Debug\Granite.exe.config
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\bin\Debug\Granite.exe
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\bin\Debug\Granite.pdb
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\bin\Debug\MySql.Data.dll
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.csprojResolveAssemblyReference.cache
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.EditUser.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.Form1.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.Home.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.MainWindow.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.makeTest.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.Properties.Resources.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\WindowsFormsApplication1.splashscreen.resources
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.csproj.GenerateResource.Cache
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.exe
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.pdb
+Z:\College Courses\SE1\idk the sprint\granite-toMerge\Granite\obj\Debug\Granite.ExitWarning.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\bin\Debug\Granite.exe.config
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.exe
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.pdb
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\bin\Debug\Granite.exe
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\bin\Debug\Granite.pdb
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\bin\Debug\MySql.Data.dll
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.csprojResolveAssemblyReference.cache
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.EditUser.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.ExitWarning.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.Form1.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.Home.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.MainWindow.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.makeTest.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.Properties.Resources.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\WindowsFormsApplication1.splashscreen.resources
+C:\Users\human\Documents\College\SE1\Sprint\granite-Trystan\Granite\obj\Debug\Granite.csproj.GenerateResource.Cache

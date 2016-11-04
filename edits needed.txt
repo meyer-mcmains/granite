@@ -1,0 +1,10 @@
+HOME
+-banners for each*
+Make test
+-buttons centered*
+Give test
+-options need changed*
+-colors updated*
+-instead of sending to test, pick a student
+-way to finish test
+program needs to close sent to main*
