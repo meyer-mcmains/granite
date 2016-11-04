@@ -43,5 +43,11 @@ namespace Granite
             EditUser eu = new EditUser();
             eu.Show();
         }
+
+        private void addStudent_Click(object sender, EventArgs e)
+        {
+            addStudent student = new addStudent();
+            student.Show();
+        }
     }
 }

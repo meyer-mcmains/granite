@@ -107,7 +107,7 @@ namespace Granite
                         c.Close();
                         Home hw = new Home();
                         hw.Show();
-                        this.Hide();
+                        this.Close();
                     }
                     else
                     {

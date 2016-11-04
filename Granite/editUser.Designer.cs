@@ -60,6 +60,7 @@
             // 
             this.usernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTxt.Location = new System.Drawing.Point(133, 6);
+            this.usernameTxt.MaxLength = 20;
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.ReadOnly = true;
             this.usernameTxt.Size = new System.Drawing.Size(220, 26);
@@ -79,6 +80,7 @@
             // 
             this.passwordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTxt.Location = new System.Drawing.Point(133, 38);
+            this.passwordTxt.MaxLength = 30;
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.ReadOnly = true;
             this.passwordTxt.Size = new System.Drawing.Size(220, 26);
@@ -100,6 +102,7 @@
             // 
             this.emailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTxt.Location = new System.Drawing.Point(133, 102);
+            this.emailTxt.MaxLength = 40;
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(220, 26);
             this.emailTxt.TabIndex = 3;
@@ -119,6 +122,7 @@
             // 
             this.firstTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstTxt.Location = new System.Drawing.Point(133, 134);
+            this.firstTxt.MaxLength = 12;
             this.firstTxt.Name = "firstTxt";
             this.firstTxt.Size = new System.Drawing.Size(220, 26);
             this.firstTxt.TabIndex = 4;
@@ -128,6 +132,7 @@
             // 
             this.lastTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastTxt.Location = new System.Drawing.Point(133, 165);
+            this.lastTxt.MaxLength = 12;
             this.lastTxt.Name = "lastTxt";
             this.lastTxt.Size = new System.Drawing.Size(220, 26);
             this.lastTxt.TabIndex = 5;
