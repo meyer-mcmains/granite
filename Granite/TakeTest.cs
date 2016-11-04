@@ -16,6 +16,8 @@ namespace Granite
         internal User user;
         internal Student stu;
         private Connection conn;
+        private int score;
+        private int questions;
         public TakeTest()
         {
             InitializeComponent();
@@ -39,11 +41,6 @@ namespace Granite
             Close();
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void populateFields()
         {
             MySqlDataReader rdr = null;
@@ -64,8 +61,11 @@ namespace Granite
             rdr.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NextButton_Click(object sender, EventArgs e)
         {
+            score += trackBar1.Value;   //add trackbar value to the score
+            questions++;             //increment the number of questions asked
+            trackBar1.Value = 0;
             populateFields();
         }
 
@@ -73,6 +73,11 @@ namespace Granite
         {
             Home home = new Home(user);
             home.Show();
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            ScoreBox.Text = trackBar1.Value.ToString();
         }
 
         

@@ -49,7 +49,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.stuNameBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.ScoreLabel = new System.Windows.Forms.Label();
+            this.ScoreBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -141,6 +143,7 @@
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trackBar1.Size = new System.Drawing.Size(45, 349);
             this.trackBar1.TabIndex = 5;
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // label2
             // 
@@ -232,22 +235,45 @@
             this.stuNameBox.TabIndex = 14;
             this.stuNameBox.Text = "Student Name";
             // 
-            // button1
+            // NextButton
             // 
-            this.button1.Location = new System.Drawing.Point(765, 119);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.NextButton.Location = new System.Drawing.Point(765, 119);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(142, 23);
+            this.NextButton.TabIndex = 15;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreLabel.Location = new System.Drawing.Point(771, 228);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(80, 25);
+            this.ScoreLabel.TabIndex = 16;
+            this.ScoreLabel.Text = "Score:";
+            // 
+            // ScoreBox
+            // 
+            this.ScoreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreBox.Location = new System.Drawing.Point(765, 256);
+            this.ScoreBox.Name = "ScoreBox";
+            this.ScoreBox.ReadOnly = true;
+            this.ScoreBox.Size = new System.Drawing.Size(95, 26);
+            this.ScoreBox.TabIndex = 17;
+            this.ScoreBox.Text = "0";
+            this.ScoreBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 465);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ScoreBox);
+            this.Controls.Add(this.ScoreLabel);
+            this.Controls.Add(this.NextButton);
             this.Controls.Add(this.stuNameBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -298,6 +324,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox stuNameBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.TextBox ScoreBox;
     }
 }

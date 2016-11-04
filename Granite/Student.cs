@@ -8,12 +8,12 @@ namespace Granite
 {
     public class Student
     {
-        public int enumber { get; set; }
+        public string enumber { get; set; }
         public string first { get; set; }
         public string last { get; set; }
         public bool testTaken { get; set; }
 
-        public Student(int e, string f, string l)
+        public Student(string e, string f, string l)
         {
             this.enumber = e;
             this.first = f;
