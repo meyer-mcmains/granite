@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Granite
 {
-    class User
+    public class User
     {
-        internal string username { get; set; }
-        internal string first { get; set; }
-        internal string last { get; set; }
-        internal string email { get; set; }
-        internal string role { get; set; }
-        internal string password { get; set; }
+        public string username { get; set; }
+        public string first { get; set; }
+        public string last { get; set; }
+        public string email { get; set; }
+        public string role { get; set; }
+        public string password { get; set; }
         public User(string user, string f, string l, string email, string e, string r, string p)
         {
             this.username = user;

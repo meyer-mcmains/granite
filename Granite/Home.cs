@@ -12,16 +12,23 @@ namespace Granite
 {
     public partial class Home : Form
     {
+        internal User user;
+        internal Student stu;
         public Home()
         {
             InitializeComponent();
         }
-
+        public Home(User u)
+        {
+            InitializeComponent();
+            user = u;
+        }
         
 
         private void giveTest_Click(object sender, EventArgs e)
         {
-            MainWindow mw = new MainWindow();
+            Student stu = new Student(00000000, "Stu", "Dent");
+            TakeTest mw = new TakeTest(user, stu);
             mw.Show();
             this.Hide();
         }

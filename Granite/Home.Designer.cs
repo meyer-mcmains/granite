@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.giveTest = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.MakeQ = new System.Windows.Forms.Button();
+            this.Analytics = new System.Windows.Forms.Button();
             this.editUsr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,25 +44,25 @@
             this.giveTest.UseVisualStyleBackColor = true;
             this.giveTest.Click += new System.EventHandler(this.giveTest_Click);
             // 
-            // button1
+            // MakeQ
             // 
-            this.button1.Location = new System.Drawing.Point(345, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Make Questions";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.MakeQ.Location = new System.Drawing.Point(345, 143);
+            this.MakeQ.Name = "MakeQ";
+            this.MakeQ.Size = new System.Drawing.Size(92, 23);
+            this.MakeQ.TabIndex = 1;
+            this.MakeQ.Text = "Make Questions";
+            this.MakeQ.UseVisualStyleBackColor = true;
+            this.MakeQ.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Analytics
             // 
-            this.button2.Location = new System.Drawing.Point(345, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Analystics";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Analytics.Location = new System.Drawing.Point(345, 172);
+            this.Analytics.Name = "Analytics";
+            this.Analytics.Size = new System.Drawing.Size(92, 23);
+            this.Analytics.TabIndex = 2;
+            this.Analytics.Text = "Analystics";
+            this.Analytics.UseVisualStyleBackColor = true;
+            this.Analytics.Click += new System.EventHandler(this.button2_Click);
             // 
             // editUsr
             // 
@@ -81,8 +81,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(169)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(822, 357);
             this.Controls.Add(this.editUsr);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Analytics);
+            this.Controls.Add(this.MakeQ);
             this.Controls.Add(this.giveTest);
             this.Name = "Home";
             this.Text = "Home";
@@ -93,8 +93,8 @@
         #endregion
 
         private System.Windows.Forms.Button giveTest;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button MakeQ;
+        private System.Windows.Forms.Button Analytics;
         private System.Windows.Forms.Button editUsr;
     }
 }

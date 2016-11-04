@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Granite
 {
-    class Student
+    public class Student
     {
-        private string enumber { get; set; }
-        private string first { get; set; }
-        private string last { get; set; }
-        private bool testTaken { get; set; }
+        public int enumber { get; set; }
+        public string first { get; set; }
+        public string last { get; set; }
+        public bool testTaken { get; set; }
 
-        public Student(string e, string f, string l)
+        public Student(int e, string f, string l)
         {
             this.enumber = e;
             this.first = f;
