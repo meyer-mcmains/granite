@@ -18,6 +18,7 @@ namespace Granite
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new splashscreen());
+            Application.Exit();
         }
     }
 }

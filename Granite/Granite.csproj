@@ -50,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="addStudent.Designer.cs">
-      <DependentUpon>addStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="editUser.cs">
@@ -63,6 +57,12 @@
     </Compile>
     <Compile Include="editUser.Designer.cs">
       <DependentUpon>editUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExitWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitWarning.Designer.cs">
+      <DependentUpon>ExitWarning.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -100,11 +100,11 @@
     <Compile Include="Student.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="addStudent.resx">
-      <DependentUpon>addStudent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="editUser.resx">
       <DependentUpon>editUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitWarning.resx">
+      <DependentUpon>ExitWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

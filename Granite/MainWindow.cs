@@ -17,6 +17,7 @@ namespace Granite
         public MainWindow()
         {
             InitializeComponent();
+            CenterToScreen();
             conn = new Connection();
             populateFields();
         }
@@ -50,7 +51,11 @@ namespace Granite
                 richTextBox2.Text = rdr["answertext"].ToString();
                 //this.comboBox2.Items.Add(reader["courseID"].ToString() + " " + (string)reader["name"]);
                 if (!rdr.HasRows)
-                  break;
+                {
+                    break;
+                }
+
+                  
            }
 
             rdr.Close();
@@ -59,6 +64,45 @@ namespace Granite
         private void button1_Click(object sender, EventArgs e)
         {
             populateFields();
+        }
+
+        private void MainWindow_Load_1(object sender, EventArgs e)
+        {
+            
+        }
+        /*private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ExitWarning ew = new ExitWarning();
+            ew.Show();
+        }*/
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
+                
+            }
+            else
+            {
+                e.Cancel = true;
+                this.Activate();
+            }
+        }
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home h1 = new Home();
+            h1.Show();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("To go back to home press the home button in the options bar.", "Help", MessageBoxButtons.OK);
         }
     }
 }
