@@ -17,6 +17,7 @@ namespace Granite
         public makeTest()
         {
             InitializeComponent();
+            CenterToScreen();
             ConnectDatabase();
             populateCombo();
         }
@@ -53,19 +54,31 @@ namespace Granite
                 rdr.Close();
                 richTextBox1.Text = "";
                 richTextBox2.Text = "";
+                MessageBox.Show("Question and Answer Saved!", "Saving...", MessageBoxButtons.OK);
             }
             catch(Exception ex)
             {
 
             }
-            
+           
+
         }
 
         private void finishCreating_Click(object sender, EventArgs e)
         {
-            Home h = new Home();
-            h.Show();
-            this.Hide();
+            if (MessageBox.Show( "Did you save your question?", "Finished Saving", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("Taking you home!", "Finished", MessageBoxButtons.OK);
+                Home h = new Home();
+                h.Show();
+                this.Hide();
+            }
+            else
+            {
+                //e.Cancel = true;
+                this.Activate();
+            }
+            
         }
 
 
@@ -90,6 +103,24 @@ namespace Granite
             }
             reader.Close();
             return;
+        }
+
+        private void makeTest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                e.Cancel = true;
+                this.Activate();
+            }
+        }
+        private void makeTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace Granite
         public EditUser()
         {
             InitializeComponent();
+            CenterToScreen();
             conn = new Connection();
             GetUserInfo();
         }
@@ -234,6 +235,11 @@ namespace Granite
         private void EditUser_FormClosed(object sender, FormClosedEventArgs e)
         {
             conn.Close();
+        }
+
+        private void EditUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

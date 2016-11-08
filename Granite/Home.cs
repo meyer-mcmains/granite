@@ -15,6 +15,7 @@ namespace Granite
         public Home()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         
@@ -32,6 +33,8 @@ namespace Granite
             mt.Show();
             this.Hide();
         }
+        
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -44,10 +47,27 @@ namespace Granite
             eu.Show();
         }
 
-        private void addStudent_Click(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-            addStudent student = new addStudent();
-            student.Show();
+
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                e.Cancel = true;
+                this.Activate();
+            }
+        }
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

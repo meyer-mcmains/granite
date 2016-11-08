@@ -58,7 +58,7 @@
             // 
             // saveQuestion
             // 
-            this.saveQuestion.Location = new System.Drawing.Point(387, 309);
+            this.saveQuestion.Location = new System.Drawing.Point(303, 300);
             this.saveQuestion.Name = "saveQuestion";
             this.saveQuestion.Size = new System.Drawing.Size(75, 23);
             this.saveQuestion.TabIndex = 4;
@@ -68,7 +68,7 @@
             // 
             // finishCreating
             // 
-            this.finishCreating.Location = new System.Drawing.Point(468, 309);
+            this.finishCreating.Location = new System.Drawing.Point(400, 300);
             this.finishCreating.Name = "finishCreating";
             this.finishCreating.Size = new System.Drawing.Size(75, 23);
             this.finishCreating.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(463, 84);
+            this.label1.Location = new System.Drawing.Point(395, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 8;
@@ -107,9 +107,9 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(468, 122);
+            this.richTextBox2.Location = new System.Drawing.Point(400, 122);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(342, 123);
+            this.richTextBox2.Size = new System.Drawing.Size(385, 123);
             this.richTextBox2.TabIndex = 9;
             this.richTextBox2.Text = "";
             // 
@@ -128,7 +128,9 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
             this.Name = "makeTest";
-            this.Text = "makeTest";
+            this.Text = "Create Questions";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.makeTest_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.makeTest_FormClosed);
             this.Load += new System.EventHandler(this.makeTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
