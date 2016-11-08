@@ -98,5 +98,11 @@ namespace Granite
         {
             Environment.Exit(0);
         }
+
+        private void addStudent_Click(object sender, EventArgs e)
+        {
+            addStudent ass = new addStudent();
+            ass.Show();
+        }
     }
 }
