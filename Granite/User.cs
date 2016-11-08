@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Granite
 {
-    class User
+    public class User
     {
         internal string username { get; set; }
         internal string first { get; set; }

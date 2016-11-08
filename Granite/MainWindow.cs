@@ -13,12 +13,27 @@ namespace Granite
 {
     public partial class MainWindow : Form
     {
+        internal User user;
+        internal Student stu;
         private Connection conn;
+        private int score;
+        private int questions;
+
         public MainWindow()
         {
             InitializeComponent();
             CenterToScreen();
             conn = new Connection();
+            populateFields();
+        }
+
+        public MainWindow(User u, Student s)
+        {
+            InitializeComponent();
+            conn = new Connection();
+            stu = s;
+            user = u;
+            textBox1.Text = stu.first + " " + stu.last;
             populateFields();
         }
 
@@ -45,17 +60,10 @@ namespace Granite
 
             while (rdr.Read())
             {
-                //String test = (string)reader["name"];
-                //label3.Text = (string)reader["name"];
                 richTextBox1.Text = rdr["questiontext"].ToString();
                 richTextBox2.Text = rdr["answertext"].ToString();
-                //this.comboBox2.Items.Add(reader["courseID"].ToString() + " " + (string)reader["name"]);
                 if (!rdr.HasRows)
-                {
-                    break;
-                }
-
-                  
+                    break;      
            }
 
             rdr.Close();
@@ -63,18 +71,12 @@ namespace Granite
 
         private void button1_Click(object sender, EventArgs e)
         {
+            score += trackBar1.Value;   //add trackbar value to the score
+            questions++;             //increment the number of questions asked
+            trackBar1.Value = 0;
             populateFields();
         }
 
-        private void MainWindow_Load_1(object sender, EventArgs e)
-        {
-            
-        }
-        /*private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            ExitWarning ew = new ExitWarning();
-            ew.Show();
-        }*/
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
