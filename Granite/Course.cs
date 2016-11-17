@@ -12,11 +12,18 @@ namespace Granite
         private string name { get; set; }
         private string type { get; set; }
 
+        public Course()
+        {
+        }
         public Course(string id, string n, string t)
         {
             this.id = id;
             this.name = name;
             this.type = type;
+        }
+        public Course(string id)
+        {
+            this.id = id;
         }
         public void createQuestion()
         {
