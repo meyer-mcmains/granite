@@ -14,6 +14,10 @@ namespace Granite
         internal bool testTaken { get; set; }
         internal string concentration { get; set; }
 
+        public Student()
+        {
+
+        }
         public Student(string e, string f, string l)
         {
             this.enumber = e;

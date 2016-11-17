@@ -113,7 +113,6 @@ namespace Granite
             chngPswd.Visible = false;
             passwordChanged = 1;
             submit.Visible = true;
-            enterPassword.Visible = true;
         }
 
         private void emailTxt_TextChanged(object sender, EventArgs e)
@@ -122,7 +121,6 @@ namespace Granite
             {
                 emailChanged = 1;
                 submit.Visible = true;
-                enterPassword.Visible = true;
             }
         }
 
@@ -132,7 +130,6 @@ namespace Granite
             {
                 firstChanged = 1;
                 submit.Visible = true;
-                enterPassword.Visible = true;
             }
         }
 
@@ -142,7 +139,6 @@ namespace Granite
             {
                 lastChanged = 1;
                 submit.Visible = true;
-                enterPassword.Visible = true;
             }
         }
 
@@ -168,12 +164,6 @@ namespace Granite
             this.Close();
         }
 
-        private void enterPassword_Enter(object sender, EventArgs e)
-        {
-            enterPassword.Text = "";
-            enterPassword.UseSystemPasswordChar = true;
-        }
-
         private void changePswdTxt_Leave(object sender, EventArgs e)
         {
             if (passwordTxt.Text != changePswdTxt.Text)
@@ -194,14 +184,6 @@ namespace Granite
             changePswdTxt.ForeColor = Color.Black;
             changePswdTxt.Text = "";
             changePswdTxt.UseSystemPasswordChar = true;
-        }
-
-        private void enterPassword_TextChanged(object sender, EventArgs e)
-        {
-            if (enterPassword.Text == u.password)
-            {
-                submit.Enabled = true;
-            }
         }
 
         private void UpdatePassword()

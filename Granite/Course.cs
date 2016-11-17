@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Granite
 {
-    public class Course
+    class Course
     {
         private string id { get; set; }
         private string name { get; set; }
         private string type { get; set; }
+
         public Course()
         {
-            this.id = "default";
-            this.name = "default";
-            this.type = "default";
         }
         public Course(string id, string n, string t)
         {
@@ -23,9 +21,9 @@ namespace Granite
             this.name = name;
             this.type = type;
         }
-        public string getId()
+        public Course(string id)
         {
-            return this.id;
+            this.id = id;
         }
         public void createQuestion()
         {
