@@ -76,7 +76,7 @@ namespace Granite
                 indicator.ForeColor = Color.Green;
 
                 MySqlDataReader reader = null;
-                string selectUser = "SELECT username FROM user";
+                string selectUser = "SELECT username FROM user WHERE username='" + username.Text + "'";
 
                 MySqlCommand getUsername = new MySqlCommand(selectUser, c.getConn());
                 reader = getUsername.ExecuteReader();

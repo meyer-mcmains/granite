@@ -77,16 +77,15 @@ namespace Granite
 
         private void editUsr_Click(object sender, EventArgs e)
         {
-            EditUser eu = new EditUser();
-            eu.Show();
+            addUser au = new addUser();
+            au.Show();
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
-
+                //haha
             }
             else
             {
@@ -103,6 +102,12 @@ namespace Granite
         {
             addStudent ass = new addStudent();
             ass.Show();
+        }
+
+        private void editAccount_Click(object sender, EventArgs e)
+        {
+            EditUser eu = new EditUser();
+            eu.Show();
         }
     }
 }
