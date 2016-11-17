@@ -53,46 +53,40 @@
     <Compile Include="addStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addStudent.Designer.cs">
+    <Compile Include="addStudent.designer.cs">
       <DependentUpon>addStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="addUser.cs">
+    <Compile Include="Analytics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addUser.Designer.cs">
-      <DependentUpon>addUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChooseStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChooseStudent.Designer.cs">
-      <DependentUpon>ChooseStudent.cs</DependentUpon>
+    <Compile Include="Analytics.designer.cs">
+      <DependentUpon>Analytics.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="editUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editUser.Designer.cs">
+    <Compile Include="editUser.designer.cs">
       <DependentUpon>editUser.cs</DependentUpon>
     </Compile>
     <Compile Include="ExitWarning.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExitWarning.Designer.cs">
+    <Compile Include="ExitWarning.designer.cs">
       <DependentUpon>ExitWarning.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -121,11 +115,8 @@
     <EmbeddedResource Include="addStudent.resx">
       <DependentUpon>addStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseStudent.resx">
-      <DependentUpon>ChooseStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="addUser.resx">
-      <DependentUpon>addUser.cs</DependentUpon>
+    <EmbeddedResource Include="Analytics.resx">
+      <DependentUpon>Analytics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editUser.resx">
       <DependentUpon>editUser.cs</DependentUpon>
@@ -133,11 +124,11 @@
     <EmbeddedResource Include="ExitWarning.resx">
       <DependentUpon>ExitWarning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -157,7 +148,6 @@
     <EmbeddedResource Include="splashscreen.resx">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,9 +157,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

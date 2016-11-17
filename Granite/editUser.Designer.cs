@@ -43,6 +43,7 @@
             this.chngPswd = new System.Windows.Forms.Button();
             this.changePswdTxt = new System.Windows.Forms.TextBox();
             this.submit = new System.Windows.Forms.Button();
+            this.enterPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // usrName
@@ -189,7 +190,7 @@
             this.submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.submit.Enabled = false;
             this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit.Location = new System.Drawing.Point(102, 235);
+            this.submit.Location = new System.Drawing.Point(104, 289);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(150, 36);
             this.submit.TabIndex = 8;
@@ -198,12 +199,25 @@
             this.submit.Visible = false;
             this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
+            // enterPassword
+            // 
+            this.enterPassword.Location = new System.Drawing.Point(104, 263);
+            this.enterPassword.Name = "enterPassword";
+            this.enterPassword.Size = new System.Drawing.Size(150, 20);
+            this.enterPassword.TabIndex = 7;
+            this.enterPassword.Text = "Enter Password to Submit";
+            this.enterPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.enterPassword.Visible = false;
+            this.enterPassword.TextChanged += new System.EventHandler(this.enterPassword_TextChanged);
+            this.enterPassword.Enter += new System.EventHandler(this.enterPassword_Enter);
+            // 
             // EditUser
             // 
             this.AcceptButton = this.submit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 283);
+            this.ClientSize = new System.Drawing.Size(365, 337);
+            this.Controls.Add(this.enterPassword);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.changePswdTxt);
             this.Controls.Add(this.chngPswd);
@@ -245,5 +259,6 @@
         private System.Windows.Forms.Button chngPswd;
         private System.Windows.Forms.TextBox changePswdTxt;
         private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.TextBox enterPassword;
     }
 }
