@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
         void time_Tick(object sender, EventArgs e)
         {
             time.Stop();
-            Form1 f1 = new Form1();
+            Login f1 = new Login();
             f1.Show();
             this.Hide();
         }

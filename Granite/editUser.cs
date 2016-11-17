@@ -32,7 +32,7 @@ namespace Granite
         public void GetUserInfo()
         {
             u = new User();
-            u.username = Form1.userName;
+            u.username = Login.userName;
             MySqlDataReader reader = null;
             string selectUserName = "SELECT username FROM user WHERE username = '" + u.username + "'";
             string selectPassword = "SELECT password FROM user WHERE username = '" + u.username + "'";

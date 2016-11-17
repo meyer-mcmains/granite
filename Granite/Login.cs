@@ -11,11 +11,11 @@ using MySql.Data.MySqlClient;
 
 namespace Granite
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         private Connection c;
         public static string userName;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             ConnectDatabase();

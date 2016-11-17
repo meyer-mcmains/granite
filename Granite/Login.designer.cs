@@ -1,6 +1,6 @@
 ﻿namespace Granite
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.username = new System.Windows.Forms.TextBox();
             this.pswd = new System.Windows.Forms.TextBox();
             this.usrlabel = new System.Windows.Forms.Label();
