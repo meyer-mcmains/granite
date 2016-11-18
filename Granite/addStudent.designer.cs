@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addStudent));
             this.submit = new System.Windows.Forms.Button();
             this.lastLbl = new System.Windows.Forms.Label();
             this.lastTxt = new System.Windows.Forms.TextBox();
@@ -147,6 +148,7 @@
             this.Controls.Add(this.firstLbl);
             this.Controls.Add(this.eNumberTxt);
             this.Controls.Add(this.eNumber);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addStudent";
             this.Text = "addStudent";
             this.Load += new System.EventHandler(this.addStudent_Load);

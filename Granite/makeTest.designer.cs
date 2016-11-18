@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(makeTest));
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.saveQuestion = new System.Windows.Forms.Button();
@@ -83,7 +84,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(269, 21);
             this.comboBox2.TabIndex = 6;
-            this.comboBox2.Text = "Default";    
+            this.comboBox2.Text = "Default";
             // 
             // label3
             // 
@@ -127,6 +128,7 @@
             this.Controls.Add(this.saveQuestion);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "makeTest";
             this.Text = "Create Questions";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.makeTest_FormClosing);

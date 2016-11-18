@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseStudent));
             this.StudentLabel = new System.Windows.Forms.Label();
             this.StudentBox = new System.Windows.Forms.ComboBox();
             this.AddButton = new System.Windows.Forms.Button();
@@ -117,9 +118,9 @@
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.StudentBox);
             this.Controls.Add(this.StudentLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChooseStudent";
             this.Text = "ChooseStudent";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChooseStudent_FormClosed);
             this.Load += new System.EventHandler(this.ChooseStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

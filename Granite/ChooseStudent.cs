@@ -112,12 +112,6 @@ namespace Granite
             this.Close();
         }
 
-        private void ChooseStudent_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Home h = new Home();
-            h.Show();
-        }
-
         private void ChooseStudent_Load(object sender, EventArgs e)
         {
             CenterToScreen();

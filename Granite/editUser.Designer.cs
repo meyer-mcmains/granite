@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUser));
             this.usrName = new System.Windows.Forms.Label();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.passwordLbl = new System.Windows.Forms.Label();
@@ -233,6 +234,7 @@
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.usrName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditUser";
             this.Text = "Create User";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditUser_FormClosed);

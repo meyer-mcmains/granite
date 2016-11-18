@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addUser));
             this.submit = new System.Windows.Forms.Button();
             this.lastLbl = new System.Windows.Forms.Label();
             this.lastTxt = new System.Windows.Forms.TextBox();
@@ -168,6 +169,7 @@
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.usrName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addUser";
             this.Text = "addUser";
             this.Load += new System.EventHandler(this.addUser_Load);
