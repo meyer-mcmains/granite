@@ -94,6 +94,9 @@ namespace Granite
             
             while (reader.Read())
             {
+                //String test = (string)reader["name"];
+                //label3.Text = (string)reader["name"];
+
                 this.comboBox2.Items.Add(reader["courseID"].ToString() + " " + (string)reader["name"]);
                 if (!reader.HasRows)
                     break;

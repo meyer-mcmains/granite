@@ -32,11 +32,39 @@ namespace Granite
 
         private void giveTest_Click(object sender, EventArgs e)
         {
-            ChooseStudent cs = new ChooseStudent(user);
-            cs.Show();
-            MySqlDataReader rdr = null;
             string studentfname;
             string studentlname;
+            //string en = Interaction.InputBox("Enter Student eNumber (without the 'e'):", "GOAT", "enter");
+            string en = "00000000";
+            MySqlDataReader rdr = null;
+            string strQuery = "SELECT * FROM student WHERE enum = " + en;
+
+            MySqlCommand populateFields = new MySqlCommand(strQuery, conn.getConn());
+
+            rdr = populateFields.ExecuteReader();
+            if (!rdr.HasRows)
+            {
+                if (MessageBox.Show("Student not found.  Would you like to add student?", "GOAT", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    //enter the student into the database
+                }
+                else
+                {
+                    return;
+                }
+            }
+            rdr.Read();
+            studentfname = rdr["firstname"].ToString();
+            studentlname = rdr["lastname"].ToString();
+
+
+            rdr.Close();
+
+            Student stu = new Student(en, studentfname, studentlname);
+            int h = 17;
+            Course c = new Course();
+            MainWindow mw = new MainWindow(user, stu, c);
+            mw.Show();
             conn.Close();
             this.Hide();
         }
@@ -51,15 +79,16 @@ namespace Granite
 
         private void editUsr_Click(object sender, EventArgs e)
         {
-            addUser au = new addUser();
-            au.Show();
+            EditUser eu = new EditUser();
+            eu.Show();
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //haha
+                MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
+
             }
             else
             {
@@ -78,10 +107,16 @@ namespace Granite
             ass.Show();
         }
 
-        private void editAccount_Click(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-            EditUser eu = new EditUser();
-            eu.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Analytics at = new Analytics();
+            at.Show();
+            this.Hide();
         }
     }
 }

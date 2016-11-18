@@ -83,7 +83,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(269, 21);
             this.comboBox2.TabIndex = 6;
-            this.comboBox2.Text = "Default";    
+            this.comboBox2.Text = "Default";
             // 
             // label3
             // 

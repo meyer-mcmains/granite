@@ -14,14 +14,14 @@ namespace Granite
         internal string email { get; set; }
         internal string role { get; set; }
         internal string password { get; set; }
-        public User(string user, string first, string last, string email, string role, string password)
+        public User(string user, string f, string l, string email, string e, string r, string p)
         {
             this.username = user;
-            this.first = first;
-            this.last = last;
-            this.email = email;
-            this.role = role;
-            this.password = password;
+            this.first = f;
+            this.last = l;
+            this.email = e;
+            this.role = r;
+            this.password = p;
         }
         public User(string user)
         {
@@ -30,6 +30,10 @@ namespace Granite
         public User()
         {
 
+        }
+        public void giveTest()
+        {
+            //give test logic
         }
     }
 }
