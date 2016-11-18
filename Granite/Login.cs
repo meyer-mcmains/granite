@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Granite
 {
@@ -15,6 +9,7 @@ namespace Granite
     {
         private Connection c;
         public static string userName;
+
         public Login()
         {
             InitializeComponent();
@@ -24,8 +19,8 @@ namespace Granite
         //center login labels and txtboxes on load
         private void Form1_Load(object sender, EventArgs e)
         {
-            usrlabel.Left = (this.ClientSize.Width - username.Width)/2;
-            usrlabel.Top = (this.ClientSize.Height - username.Height)/2;
+            usrlabel.Left = (this.ClientSize.Width - username.Width) / 2;
+            usrlabel.Top = (this.ClientSize.Height - username.Height) / 2;
             username.Left = this.usrlabel.Left;
             username.Top = (this.usrlabel.Top + usrlabel.Height);
             pswdLabel.Left = this.usrlabel.Left;
@@ -39,8 +34,8 @@ namespace Granite
         //recenter login labels and txtboxes if window is resized
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            usrlabel.Left = (this.ClientSize.Width - username.Width)/2;
-            usrlabel.Top = (this.ClientSize.Height - username.Height)/2;
+            usrlabel.Left = (this.ClientSize.Width - username.Width) / 2;
+            usrlabel.Top = (this.ClientSize.Height - username.Height) / 2;
             username.Left = this.usrlabel.Left;
             username.Top = (this.usrlabel.Top + usrlabel.Height);
             pswdLabel.Left = this.usrlabel.Left;
@@ -52,8 +47,6 @@ namespace Granite
         //establish a connection to the database
         private void ConnectDatabase()
         {
-
-
             try
             {
                 c = new Connection();
@@ -83,7 +76,7 @@ namespace Granite
 
                 while (reader.Read())
                 {
-                    usrName = (string) reader["username"];
+                    usrName = (string)reader["username"];
                 }
                 reader.Close();
 
@@ -94,7 +87,7 @@ namespace Granite
 
                 while (reader.Read())
                 {
-                    password = (string) reader["password"];
+                    password = (string)reader["password"];
                 }
                 reader.Close();
 
@@ -116,7 +109,7 @@ namespace Granite
                 }
                 else
                 {
-                    MessageBox.Show("Username Not Found","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Username Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)

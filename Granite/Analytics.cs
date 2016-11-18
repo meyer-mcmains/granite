@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Granite
 {
     public partial class Analytics : Form
     {
         private Connection conn;
+
         public Analytics()
         {
             InitializeComponent();
@@ -22,37 +16,30 @@ namespace Granite
 
         private void Analytics_Load(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBoxEnum_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBox1_TextChanged_1(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,7 +64,6 @@ namespace Granite
 
                 richTextBox1.Text = a + "\n" + b + "\n" + c + "\n" + d + "\n";
 
-          
                 if (!rdr.HasRows)
                     break;
             }
@@ -86,7 +72,6 @@ namespace Granite
 
         private void richTextBox2_TextChanged_1(object sender, EventArgs e)
         {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -128,6 +113,7 @@ namespace Granite
                 this.Activate();
             }
         }
+
         private void Analytics_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
@@ -138,7 +124,6 @@ namespace Granite
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
-
             }
             else
             {

@@ -170,6 +170,7 @@
             this.Controls.Add(this.usrName);
             this.Name = "addUser";
             this.Text = "addUser";
+            this.Load += new System.EventHandler(this.addUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

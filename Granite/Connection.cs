@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Granite
+﻿namespace Granite
 {
-    class Connection
+    internal class Connection
     {
         private MySql.Data.MySqlClient.MySqlConnection conn;
+
         public Connection()
-        {            
+        {
             string myConnectionString;
             myConnectionString = "server=einstein.etsu.edu;uid=bentleyp;pwd=12345;database=bentleyp";
             try
@@ -36,4 +31,3 @@ namespace Granite
         }
     }
 }
-

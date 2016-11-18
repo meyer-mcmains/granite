@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Granite
 {
@@ -16,6 +8,7 @@ namespace Granite
         internal User user;
         internal Student stu;
         private Connection conn;
+
         public Home()
         {
             InitializeComponent();
@@ -44,7 +37,6 @@ namespace Granite
             mt.Show();
             this.Hide();
         }
-        
 
         private void editUsr_Click(object sender, EventArgs e)
         {
@@ -56,8 +48,6 @@ namespace Granite
         {
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
-
             }
             else
             {
@@ -65,6 +55,7 @@ namespace Granite
                 this.Activate();
             }
         }
+
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
@@ -79,6 +70,16 @@ namespace Granite
         private void Home_Load(object sender, EventArgs e)
         {
             CenterToScreen();
+            button2.Left = (this.ClientSize.Width - button2.Width) / 2;
+            button2.Top = (this.ClientSize.Height - button2.Height) / 2;
+            editUsr.Left = (button2.Left + button2.Width + 4);
+            editUsr.Top = button2.Top;
+            addStudent.Left = (editUsr.Left + button2.Width + 4);
+            addStudent.Top = button2.Top;
+            button1.Left = (button2.Left - button2.Width - 4);
+            button1.Top = button2.Top;
+            giveTest.Left = (button1.Left - button2.Width - 4);
+            giveTest.Top = button2.Top;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -92,6 +93,20 @@ namespace Granite
         {
             EditUser eu = new EditUser();
             eu.Show();
+        }
+
+        private void Home_SizeChanged(object sender, EventArgs e)
+        {
+            button2.Left = (this.ClientSize.Width - button2.Width) / 2;
+            button2.Top = (this.ClientSize.Height - button2.Height) / 2;
+            editUsr.Left = (button2.Left + button2.Width + 4);
+            editUsr.Top = button2.Top;
+            addStudent.Left = (editUsr.Left + button2.Width + 4);
+            addStudent.Top = button2.Top;
+            button1.Left = (button2.Left - button2.Width - 4);
+            button1.Top = button2.Top;
+            giveTest.Left = (button1.Left - button2.Width - 4);
+            giveTest.Top = button2.Top;
         }
     }
 }

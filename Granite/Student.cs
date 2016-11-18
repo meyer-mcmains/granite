@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Granite
+﻿namespace Granite
 {
     public class Student
     {
@@ -16,8 +10,8 @@ namespace Granite
 
         public Student()
         {
-
         }
+
         public Student(string e, string f, string l)
         {
             this.enumber = e;

@@ -119,6 +119,8 @@
             this.Controls.Add(this.StudentLabel);
             this.Name = "ChooseStudent";
             this.Text = "ChooseStudent";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChooseStudent_FormClosed);
+            this.Load += new System.EventHandler(this.ChooseStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

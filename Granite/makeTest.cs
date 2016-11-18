@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Granite
@@ -14,6 +8,7 @@ namespace Granite
     public partial class makeTest : Form
     {
         private Connection conn;
+
         public makeTest()
         {
             InitializeComponent();
@@ -36,7 +31,6 @@ namespace Granite
 
         private void makeTest_Load(object sender, EventArgs e)
         {
-
         }
 
         private void saveQuestion_Click(object sender, EventArgs e)
@@ -48,7 +42,7 @@ namespace Granite
                 string strAdmin = "admin";
                 strCourse = strCourse.Substring(0, 4);
                 //richTextBox1.Text = strCourse;
-                string strQuery = "INSERT INTO question(questiontext, answertext, creator, course) VALUES('"+richTextBox1.Text+"','" + richTextBox2.Text+"','"+strAdmin+"',"+ strCourse+")";
+                string strQuery = "INSERT INTO question(questiontext, answertext, creator, course) VALUES('" + richTextBox1.Text + "','" + richTextBox2.Text + "','" + strAdmin + "'," + strCourse + ")";
                 MySqlCommand addQuestion = new MySqlCommand(strQuery, conn.getConn());
                 rdr = addQuestion.ExecuteReader();
                 rdr.Close();
@@ -56,17 +50,14 @@ namespace Granite
                 richTextBox2.Text = "";
                 MessageBox.Show("Question and Answer Saved!", "Saving...", MessageBoxButtons.OK);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
             }
-           
-
         }
 
         private void finishCreating_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show( "Did you save your question?", "Finished Saving", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Did you save your question?", "Finished Saving", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MessageBox.Show("Taking you home!", "Finished", MessageBoxButtons.OK);
                 Home h = new Home();
@@ -78,10 +69,7 @@ namespace Granite
                 //e.Cancel = true;
                 this.Activate();
             }
-            
         }
-
-
 
         private void populateCombo()
         {
@@ -91,7 +79,7 @@ namespace Granite
 
             MySqlCommand getCourse = new MySqlCommand(selectCourse, conn.getConn());
             reader = getCourse.ExecuteReader();
-            
+
             while (reader.Read())
             {
                 //String test = (string)reader["name"];
@@ -110,7 +98,6 @@ namespace Granite
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
-
             }
             else
             {
@@ -118,6 +105,7 @@ namespace Granite
                 this.Activate();
             }
         }
+
         private void makeTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);

@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Granite
 {
@@ -38,7 +31,6 @@ namespace Granite
             textBox1.Text = stu.first + " " + stu.last;
 
             populateFields(courseid);
-            
         }
 
         private void doStuffToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,7 +42,6 @@ namespace Granite
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
         }
 
         private void populateFields(Course courseid)
@@ -58,7 +49,7 @@ namespace Granite
             String priorid = courseid.getId();
             MySqlDataReader rdr = null;
             string strQuery = "SELECT * FROM question JOIN course ON  (question.course = course.courseID) WHERE course.courseid = " + priorid + " ORDER BY RAND() LIMIT 3";
-            
+
             MySqlCommand populateFields = new MySqlCommand(strQuery, conn.getConn());
 
             rdr = populateFields.ExecuteReader();
@@ -68,7 +59,7 @@ namespace Granite
                 richTextBox1.Text = rdr["questiontext"].ToString();
                 richTextBox2.Text = rdr["answertext"].ToString();
                 if (!rdr.HasRows)
-                    break;      
+                    break;
             }
 
             rdr.Close();
@@ -87,7 +78,6 @@ namespace Granite
             if (MessageBox.Show("Do you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MessageBox.Show("The program has been closed.", "Program Closed!", MessageBoxButtons.OK);
-                
             }
             else
             {
@@ -95,6 +85,7 @@ namespace Granite
                 this.Activate();
             }
         }
+
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
@@ -130,7 +121,6 @@ namespace Granite
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-
         }
     }
 }

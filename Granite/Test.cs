@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Granite
 {
-    class Test    
+    internal class Test
     {
         private string id { get; set; }
         private DateTime date { get; set; }
@@ -25,6 +22,7 @@ namespace Granite
             q = new List<Question>();
             qScores = new List<int>();
         }
+
         public Test(string id, List<Question> qList)
         {
             this.id = id;
@@ -32,7 +30,7 @@ namespace Granite
             this.score = 0;
             q = new List<Question>();
             qScores = new List<int>();
-            foreach(Question quest in qList)
+            foreach (Question quest in qList)
             {
                 q.Add(quest);
             }
@@ -41,13 +39,11 @@ namespace Granite
         public void CalcScore()
         {
             int current = 0;
-            foreach(int i in qScores)
+            foreach (int i in qScores)
             {
                 current += i;
             }
             score = (current / qScores.Count);
         }
-
-
     }
 }

@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Granite
@@ -14,7 +8,8 @@ namespace Granite
     public partial class ChooseStudent : Form
     {
         private User user;
-        private Connection conn; 
+        private Connection conn;
+
         public ChooseStudent()
         {
             InitializeComponent();
@@ -28,6 +23,7 @@ namespace Granite
             populatStudentCombo();
             populateCourseCombo();
         }
+
         public void ConnectDatabase()
         {
             try
@@ -51,7 +47,6 @@ namespace Granite
 
             while (reader.Read())
             {
-
                 this.CourseBox.Items.Add(reader["courseID"].ToString() + " " + (string)reader["name"]);
                 if (!reader.HasRows)
                     break;
@@ -92,33 +87,40 @@ namespace Granite
                 Student student = new Student();
                 while (reader.Read())
                 {
-
                     student = new Student(reader["enum"].ToString(), reader["firstname"].ToString(), reader["lastname"].ToString());
                     if (!reader.HasRows)
                         break;
                 }
                 string strCourse = CourseBox.SelectedItem.ToString();
                 strCourse = strCourse.Substring(0, 4);
-                Course course =  new Course(strCourse);
+                Course course = new Course(strCourse);
                 MainWindow main = new MainWindow(user, student, course);
                 main.Show();
                 this.Close();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 //Home h = new Home(user); // add the Course afterwards!!
                 //h.Show();
                 //this.Close();
             }
-            
-            
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             addStudent ad = new addStudent();
             this.Close();
+        }
 
+        private void ChooseStudent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Home h = new Home();
+            h.Show();
+        }
+
+        private void ChooseStudent_Load(object sender, EventArgs e)
+        {
+            CenterToScreen();
         }
     }
 }

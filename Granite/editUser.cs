@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Granite
 {
@@ -19,7 +13,6 @@ namespace Granite
         private int emailChanged = 0;
         private int firstChanged = 0;
         private int lastChanged = 0;
-        
 
         public EditUser()
         {
@@ -46,7 +39,7 @@ namespace Granite
 
             while (reader.Read())
             {
-               u.username = (string)reader["username"];
+                u.username = (string)reader["username"];
             }
             reader.Close();
 
@@ -55,7 +48,7 @@ namespace Granite
 
             while (reader.Read())
             {
-                u.password = (string) reader["password"];
+                u.password = (string)reader["password"];
             }
             reader.Close();
 
@@ -68,7 +61,7 @@ namespace Granite
             }
             reader.Close();
 
-            MySqlCommand getFirstName= new MySqlCommand(selectFirstName, conn.getConn());
+            MySqlCommand getFirstName = new MySqlCommand(selectFirstName, conn.getConn());
             reader = getFirstName.ExecuteReader();
 
             while (reader.Read())
@@ -239,7 +232,7 @@ namespace Granite
 
         private void EditUser_Load(object sender, EventArgs e)
         {
-
+            CenterToScreen();
         }
     }
 }

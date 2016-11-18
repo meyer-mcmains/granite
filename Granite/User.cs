@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Granite
+﻿namespace Granite
 {
     public class User
     {
@@ -14,6 +8,7 @@ namespace Granite
         internal string email { get; set; }
         internal string role { get; set; }
         internal string password { get; set; }
+
         public User(string user, string first, string last, string email, string role, string password)
         {
             this.username = user;
@@ -23,14 +18,16 @@ namespace Granite
             this.role = role;
             this.password = password;
         }
+
         public User(string user)
         {
             username = user;
         }
+
         public User()
         {
-
         }
+
         public void giveTest()
         {
             //give test logic

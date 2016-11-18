@@ -1,19 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Granite
 {
     public partial class addStudent : Form
     {
-
         private Connection conn;
         private Student s;
 
@@ -28,7 +20,7 @@ namespace Granite
             this.eNumberTxt.KeyPress += new KeyPressEventHandler(eNumberTxt_KeyPress);
             CreateStudent();
         }
-        
+
         private void CreateStudent()
         {
             concentratoinCombo.Items.Add("CS");
@@ -66,7 +58,7 @@ namespace Granite
 
         private void checkedChanged()
         {
-            if(eChanged == 1 && firstChanged == 1 && lastChanged == 1 && conChanged == 1)
+            if (eChanged == 1 && firstChanged == 1 && lastChanged == 1 && conChanged == 1)
             {
                 submit.Visible = true;
                 submit.Enabled = true;
@@ -93,7 +85,6 @@ namespace Granite
                 }
                 conn.Close();
                 Close();
-                
             }
             catch (MySqlException ex)
             {
@@ -102,7 +93,11 @@ namespace Granite
 
             conn.Close();
             Close();
+        }
 
+        private void addStudent_Load(object sender, EventArgs e)
+        {
+            CenterToScreen();
         }
     }
 }

@@ -1,12 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Granite
@@ -59,7 +52,6 @@ namespace Granite
                 }
                 conn.Close();
                 Close();
-
             }
             catch (MySqlException ex)
             {
@@ -68,7 +60,11 @@ namespace Granite
 
             conn.Close();
             Close();
+        }
 
+        private void addUser_Load(object sender, EventArgs e)
+        {
+            CenterToScreen();
         }
 
         private void usernameTxt_TextChanged(object sender, EventArgs e)
@@ -92,6 +88,5 @@ namespace Granite
                 u = new User(usernameTxt.Text, firstTxt.Text, lastTxt.Text, emailTxt.Text, "0", "password");
             }
         }
-
     }
 }
