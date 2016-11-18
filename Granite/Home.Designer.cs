@@ -34,6 +34,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.editUsr = new System.Windows.Forms.Button();
             this.addStudent = new System.Windows.Forms.Button();
+            this.editAccount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // giveTest
@@ -86,12 +87,23 @@
             this.addStudent.UseVisualStyleBackColor = true;
             this.addStudent.Click += new System.EventHandler(this.addStudent_Click);
             // 
+            // editAccount
+            // 
+            this.editAccount.Location = new System.Drawing.Point(12, 12);
+            this.editAccount.Name = "editAccount";
+            this.editAccount.Size = new System.Drawing.Size(86, 23);
+            this.editAccount.TabIndex = 5;
+            this.editAccount.Text = "Edit Account";
+            this.editAccount.UseVisualStyleBackColor = true;
+            this.editAccount.Click += new System.EventHandler(this.editAccount_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(169)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(849, 357);
+            this.Controls.Add(this.editAccount);
             this.Controls.Add(this.addStudent);
             this.Controls.Add(this.editUsr);
             this.Controls.Add(this.button2);
@@ -113,5 +125,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button editUsr;
         private System.Windows.Forms.Button addStudent;
+        private System.Windows.Forms.Button editAccount;
     }
 }

@@ -48,7 +48,7 @@ namespace Granite
 
         private void editUsr_Click(object sender, EventArgs e)
         {
-            EditUser eu = new EditUser();
+            addUser eu = new addUser();
             eu.Show();
         }
 
@@ -86,6 +86,12 @@ namespace Granite
             Analytics at = new Analytics();
             at.Show();
             this.Hide();
+        }
+
+        private void editAccount_Click(object sender, EventArgs e)
+        {
+            EditUser eu = new EditUser();
+            eu.Show();
         }
     }
 }
