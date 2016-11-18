@@ -100,7 +100,7 @@ namespace Granite
                 string strCourse = CourseBox.SelectedItem.ToString();
                 strCourse = strCourse.Substring(0, 4);
                 Course course =  new Course(strCourse);
-                MainWindow main = new MainWindow(user, student); // add the Course afterwards!!
+                MainWindow main = new MainWindow(user, student, course); // add the Course afterwards!!
                 main.Show();
                 this.Close();
             }
@@ -119,6 +119,12 @@ namespace Granite
             addStudent ad = new addStudent();
             this.Close();
 
+        }
+
+        private void ChooseStudent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Home h = new Home(user);
+            h.Show();
         }
     }
 }

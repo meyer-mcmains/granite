@@ -31,5 +31,10 @@ namespace Granite
         {
             //question creation logic
         }
+
+        public Course(string id)
+        {
+            this.id = id;
+        }
     }
 }
