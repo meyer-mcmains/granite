@@ -70,7 +70,7 @@ namespace Granite
             score += trackBar1.Value;   //add trackbar value to the score
             questions++;             //increment the number of questions asked
             trackBar1.Value = 0;
-            //populateFields();
+            populateFields(courseid);
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
